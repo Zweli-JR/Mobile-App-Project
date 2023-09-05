@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- PROLOGUE
+=============================================================
+Programmer: Zwelethu Jr. Nkosi
+Description: Front end for the Profile page where all the structuring and styling of the page goes.
+============================================================= -->
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SisonkeBank.Profile">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Personal Details" FontSize="40" HorizontalOptions="Center" Padding="0,0,0,30"/>
+            <Label Text="First Name:" FontSize="Medium" TextColor="DodgerBlue"/>
+            <Label x:Name="fname" Text="Name" FontSize="Large" Padding="0,0,0,20"/>
+            <Label Text="Last Name:" FontSize="Medium" TextColor="DodgerBlue"/>
+            <Label x:Name="lname" Text="Name" FontSize="Large" Padding="0,0,0,20"/>
+            <Label Text="Email:" FontSize="Medium" TextColor="DodgerBlue"/>
+            <Label x:Name="email" Text="email" FontSize="Large" Padding="0,0,0,20"/>
+            <Label Text="Gender:" FontSize="Medium" TextColor="DodgerBlue"/>
+            <Label x:Name="gender" Text="gender" FontSize="Large" Padding="0,0,0,20"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

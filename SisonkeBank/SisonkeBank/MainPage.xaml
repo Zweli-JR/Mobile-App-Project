@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- PROLOGUE
+=============================================================
+Programmer: Zwelethu Jr. Nkosi
+Description: Front end for the Main page page where all the structuring and styling of the page goes.
+============================================================= -->
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SisonkeBank.MainPage">
+
+    <StackLayout>
+        <Grid HorizontalOptions="FillAndExpand" BackgroundColor="#FF232F39">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" Clicked="SignOut_Tapped" Text="Sign Out" TextColor="White" BackgroundColor="Transparent" HorizontalOptions="End"/>
+            <Frame BackgroundColor="Transparent" HeightRequest="20">
+                <Image Grid.Column="0" Source="logo.png" HorizontalOptions="Start"/>
+            </Frame>
+        </Grid>
+        <Label x:Name="name" Text="Welcome" FontSize="30" Padding="0,5,0,0" HorizontalOptions="Center"/>
+        <StackLayout Padding="20,10">
+            <Frame CornerRadius="10" HasShadow="True" Padding="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="profile.jpg" HeightRequest="70" HorizontalOptions="Start"/>
+                    <Label Grid.Column="1" Text="Profile" TextColor="DodgerBlue" FontSize="20" FontAttributes="Bold" Padding="10,20" HorizontalOptions="Start"/>
+
+                </Grid>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Profile_Tapped"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+        </StackLayout>
+        <StackLayout Padding="20,0">
+            <Frame CornerRadius="10" HasShadow="True" Padding="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="transfer.jpg" HeightRequest="70" HorizontalOptions="Start"/>
+                    <Label Grid.Column="1" Text="Transfer" TextColor="DodgerBlue" FontSize="20" FontAttributes="Bold" Padding="10,20" HorizontalOptions="Start"/>
+
+                </Grid>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Transfer_Tapped"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+        </StackLayout>
+        <Label Text="Accounts" Padding="30,20,0,0" FontSize="20"/>
+        <StackLayout Padding="20,0">
+            <Frame CornerRadius="10" HasShadow="True" Padding="20,10,0,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70*"/>
+                        <ColumnDefinition Width="30*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Savings" TextColor="DodgerBlue" FontSize="20" FontAttributes="Bold" HorizontalOptions="Start"/>
+                    <Label x:Name="savingsBal" Grid.Column="1" Text="R1000" TextColor="Black" FontSize="20"/>
+                </Grid>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Savings_Tapped"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+            <Line/>
+            <Frame CornerRadius="10" HasShadow="True" Padding="20,10,0,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70*"/>
+                        <ColumnDefinition Width="30*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Cheque" TextColor="DodgerBlue" FontSize="20" FontAttributes="Bold" HorizontalOptions="Start"/>
+                    <Label x:Name="chequeBal" Grid.Column="1" Text="R1000" TextColor="Black" FontSize="20"/>
+                </Grid>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Cheque_Tapped"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

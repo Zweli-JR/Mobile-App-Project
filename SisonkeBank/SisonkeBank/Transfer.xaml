@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- PROLOGUE
+=============================================================
+Programmer: Zwelethu Jr. Nkosi
+Description: Front end for the transfer page where all the structuring and styling of the page goes.
+============================================================= -->
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SisonkeBank.Transfer">
+   
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Accounts" Padding="30,20,0,0" FontSize="20"/>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="10" HasShadow="True" Padding="20,10,0,10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70*"/>
+                            <ColumnDefinition Width="30*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="Savings" TextColor="DodgerBlue" FontSize="20" FontAttributes="Bold" HorizontalOptions="Start"/>
+                        <Label x:Name="savingsBal" Grid.Column="1" Text="R1000" TextColor="Black" FontSize="20"/>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Savings_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Line/>
+                <Frame CornerRadius="10" HasShadow="True" Padding="20,10,0,10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70*"/>
+                            <ColumnDefinition Width="30*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="Cheque" TextColor="DodgerBlue" FontSize="20" FontAttributes="Bold" HorizontalOptions="Start"/>
+                        <Label x:Name="chequeBal" Grid.Column="1" Text="R1000" TextColor="Black" FontSize="20"/>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Cheque_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </StackLayout>
+            <StackLayout Padding="20">
+                <Label Text="Transfer Direction:" />
+                <Picker x:Name="transferDirectionPicker">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Transfer from savings to cheque</x:String>
+                            <x:String>Transfer from cheque to savings</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label Text="Amount to Transfer:" Padding="0,20,0,0"/>
+                <Entry Keyboard="Numeric" Placeholder="Enter amount" x:Name="amountEntry"/>
+
+
+                <Button x:Name="TransferBtn" Text="Transfer" CornerRadius="50" BackgroundColor="DodgerBlue" TextColor="White" Margin="20" Clicked="TransferBtn_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

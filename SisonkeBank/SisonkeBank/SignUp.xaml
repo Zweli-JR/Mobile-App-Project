@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- PROLOGUE
+=============================================================
+Programmer: Zwelethu Jr. Nkosi
+Description: Front end for the sign up page where all the structuring and styling of the page goes.
+============================================================= -->
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SisonkeBank.SignUp"
+             BackgroundColor="#FF232F39">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Padding="40">
+                <StackLayout HeightRequest="110">
+                    <Image Source="logo.png" WidthRequest="200"/>
+                    <Label Text="Sign Up" TextColor="White" HorizontalOptions="Center" Padding="10" FontSize="40"/>
+                </StackLayout>
+                <StackLayout HeightRequest="70">
+                    <Label Text="Already have an account?" TextColor="White" HorizontalOptions="Center"/>
+                    <Label HorizontalOptions="Center" >
+                        <Label.FormattedText >
+                            <FormattedString>
+                                <Span Text="Login" TextColor="DodgerBlue"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="SignTG" Tapped="SignTG_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+                <StackLayout>
+                    <Entry x:Name="txtName" Placeholder="First Name" PlaceholderColor="Gray" TextColor="White" ></Entry>
+                    <Entry x:Name="txtSurname" Placeholder="Last Name" PlaceholderColor="Gray" TextColor="White" ></Entry>
+                    <Entry x:Name="txtEmail" Keyboard="Email" Placeholder="Email" PlaceholderColor="Gray" TextColor="White" ></Entry>
+                    <Entry x:Name="txtNumber" Keyboard="Telephone" Placeholder="Contact No." PlaceholderColor="Gray" TextColor="White" ></Entry>
+                    <Entry x:Name="txtPsswd" Placeholder="Password" PlaceholderColor="Gray" IsPassword="True" TextColor="White"></Entry>
+                    <Entry x:Name="txtGender" Placeholder="Gender" PlaceholderColor="Gray" TextColor="White" ></Entry>
+                </StackLayout>
+                <StackLayout HeightRequest="300" Margin="0,20">
+                    <Button x:Name="BtnSignUP" Clicked="BtnSignUP_Clicked" Text="Sign Up" CornerRadius="50" BackgroundColor="DodgerBlue" TextColor="White"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- PROLOGUE
+=============================================================
+Programmer: Zwelethu Jr. Nkosi
+Description: Front end for the login page where all the structuring and styling of the page goes.
+============================================================= -->
+    
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SisonkeBank.Login"
+             BackgroundColor="#FF232F39">
+    
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Padding="40">
+            <StackLayout HeightRequest="110">
+                <Image Source="logo.png" WidthRequest="200"/>
+                <Label Text="Login" HorizontalOptions="Center" TextColor="White" Padding="10" FontSize="40"/>
+            </StackLayout>
+            <StackLayout HeightRequest="70">
+                <Label Text="Don't have an account?" TextColor="White" HorizontalOptions="Center"/>
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Sign up" TextColor="DodgerBlue"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="LoginTG" Tapped="LoginTG_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+            <StackLayout>
+                <Entry x:Name="txtEmail" Keyboard="Email" Placeholder="Username" PlaceholderColor="Gray" TextColor="White" ></Entry>
+                <Entry x:Name="txtPsswd" Placeholder="Password" PlaceholderColor="Gray" IsPassword="True" TextColor="White"></Entry>
+            </StackLayout>
+            <StackLayout Margin="0,20" HeightRequest="100">
+                <Button x:Name="BtnLogin" Clicked="BtnLogin_Clicked" Text="Login" CornerRadius="50" BackgroundColor="DodgerBlue" TextColor="White"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

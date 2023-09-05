@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- PROLOGUE
+=============================================================
+Programmer: Zwelethu Jr. Nkosi
+Description: Front end for the account information page.
+============================================================= -->    
+    
+    
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SisonkeBank.AccDetails">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Account Details" FontSize="40" HorizontalOptions="Center" Padding="0,0,0,30"/>
+            <Label Text="Balance:" FontSize="Medium" TextColor="DodgerBlue"/>
+            <Label x:Name="accBal" Text="R---" FontSize="35" Padding="0,0,0,20"/>
+            <Label Text="Account Type:" FontSize="Medium" TextColor="DodgerBlue"/>
+            <Label x:Name="accType" Text="Acc" FontSize="Large" Padding="0,0,0,20"/>
+            <Label Text="Account Number:" FontSize="Medium" TextColor="DodgerBlue"/>
+            <Label x:Name="accNumber" Text="00121" FontSize="Large" Padding="0,0,0,20"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
