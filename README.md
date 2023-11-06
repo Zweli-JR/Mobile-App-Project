@@ -1,1 +1,2 @@
-This repository is missing a directory for the android app because the folder is too big to upload (± 4 000 files)
+Mobile banking app
+to view the code open the SisonkeBank folder
